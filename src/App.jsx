@@ -6,6 +6,10 @@ const content = {
     nav: ["首页", "关于我们", "课程与服务", "联系我们"],
     hero: "培养数字时代的主动创造者",
     sub: "智慧使用，创造未来",
+    aboutTitle: "关于我们",
+    aboutDesc: "和光·未来学院致力于培养学生的创造力和数字素养。",
+    programsTitle: "课程与服务",
+    programsDesc: "我们提供丰富的课程和项目，帮助学生掌握未来技能。",
     contact: "联系我们",
     footer: "© 2025 和光·未来学院 · 智慧使用，创造未来"
   },
@@ -13,6 +17,10 @@ const content = {
     nav: ["Home", "About", "Programs", "Contact"],
     hero: "Cultivate Proactive Creators in the Digital Age",
     sub: "Using Wisely, Creating for Future",
+    aboutTitle: "About Us",
+    aboutDesc: "Heguang Future Academy is dedicated to nurturing students' creativity and digital literacy.",
+    programsTitle: "Programs & Services",
+    programsDesc: "We offer a variety of courses and programs to equip students with future-ready skills.",
     contact: "Contact Us",
     footer: "© 2025 Heguang Future Academy · Using Wisely, Creating for Future"
   }
@@ -39,11 +47,25 @@ export default function App() {
         ))}
       </nav>
 
-      <section className="text-center py-24 px-6">
+      {/* Hero Section */}
+      <section id="0" className="text-center py-24 px-6">
         <motion.h2 className="text-3xl font-bold text-blue-800 mb-2">{t.hero}</motion.h2>
         <p className="text-lg text-gray-700">{t.sub}</p>
       </section>
 
+      {/* About Section */}
+      <section id="1" className="py-20 px-6 bg-gray-100 text-center">
+        <h2 className="text-2xl font-bold mb-4">{t.aboutTitle}</h2>
+        <p className="max-w-2xl mx-auto">{t.aboutDesc}</p>
+      </section>
+
+      {/* Programs Section */}
+      <section id="2" className="py-20 px-6 text-center">
+        <h2 className="text-2xl font-bold mb-4">{t.programsTitle}</h2>
+        <p className="max-w-2xl mx-auto">{t.programsDesc}</p>
+      </section>
+
+      {/* Contact Section */}
       <section id="3" className="text-center py-20 bg-blue-800 text-white">
         <h2 className="text-2xl font-bold mb-6">{t.contact}</h2>
         <p>📧 info@heguangfuture.com</p>
